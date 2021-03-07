@@ -134,7 +134,10 @@ public class Frame {
 			public void actionPerformed(ActionEvent e) {
 				switch (mode) {
 				case 1: txtEncoded.setText(Encoder.encodeString(txtDecoded.getText())); break;
-				//case 2: break;
+				case 2:	
+					for(String s: Encoder.ceasarEncoder(txtDecoded.getText())) {
+						txtEncoded.append(s+"\n");
+					}					
 				//case 3: break;				
 				}				
 			}
